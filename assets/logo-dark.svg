@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="IVA">
+  <defs>
+    <linearGradient id="bgL" x1="40" y1="20" x2="480" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f7f3ff"/>
+      <stop offset="1" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <linearGradient id="ivaL" x1="70" y1="90" x2="450" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7e22ce"/>
+      <stop offset=".5" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="pillL" x1="120" y1="360" x2="400" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="118" fill="url(#bgL)"/>
+  <rect x="22" y="22" width="468" height="468" rx="100" fill="none" stroke="url(#ivaL)" stroke-opacity=".28" stroke-width="8"/>
+  <g fill="url(#ivaL)">
+    <rect x="76" y="124" width="46" height="180" rx="11"/>
+    <path d="M146 124h46l42 180h-50z"/>
+    <path d="M270 124h-46l-42 180h50z"/>
+    <path fill-rule="evenodd" d="M292 304 346 124h50l54 180h-50l-12-42H354l-12 42h-50zm66-84h30l-15-54z"/>
+  </g>
+  <rect x="118" y="348" width="276" height="56" rx="28" fill="url(#pillL)"/>
+  <g fill="#fff" font-family="ui-sans-serif,system-ui,sans-serif" font-size="30" font-weight="700">
+    <text x="150" y="386">+</text>
+    <text x="214" y="386">−</text>
+    <text x="276" y="386">×</text>
+    <text x="340" y="386">÷</text>
+  </g>
+</svg>
