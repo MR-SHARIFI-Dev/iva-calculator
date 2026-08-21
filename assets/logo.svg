@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
-<rect width="512" height="512" rx="90" fill="#130020"/>
-<text x="65" y="300" font-size="180" fill="#ae5cff" font-family="Arial">IVA</text>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512'><rect width='512' height='512' rx='90' fill='#120020'/><text x='70' y='300' font-size='170' fill='#b15cff'>IVA</text></svg>

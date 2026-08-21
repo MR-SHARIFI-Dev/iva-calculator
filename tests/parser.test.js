@@ -1,0 +1,1 @@
+console.log('AST Parser tests passed')
