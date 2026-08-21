@@ -162,7 +162,7 @@ Built with:
 ## Clone Repository
 
 ```bash
-git clone https://github.com/username/iva-calculator.git
+git clone https://github.com/MR-SHARIFI-Dev/iva-calculator.git
 ```
 
 Enter project:
@@ -292,7 +292,7 @@ Features:
 Demo:
 
 ```
-https://username.github.io/iva-calculator/
+https://MR-SHARIFI-Dev.github.io/iva-calculator/
 ```
 
 ---
