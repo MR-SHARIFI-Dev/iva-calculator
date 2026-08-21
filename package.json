@@ -1,0 +1,8 @@
+{
+  "name": "iva-calculator-pro",
+  "version": "2.0.0",
+  "scripts": {
+    "test": "node tests/test.js",
+    "lint": "echo lint"
+  }
+}

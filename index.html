@@ -1,23 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IVA Calculator</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="IVA Calculator Pro open source scientific calculator">
+<meta property="og:title" content="IVA Calculator Pro">
+<meta property="og:image" content="assets/social-preview.png">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="src/style.css">
+<title>IVA Calculator Pro</title>
 </head>
 <body>
-<div class="app">
-<h1><span>IVA</span> Calculator</h1>
-<div id="display">0</div>
-<div class="keys">
-<button>C</button><button>⌫</button><button>%</button><button>/</button>
-<button>7</button><button>8</button><button>9</button><button>*</button>
-<button>4</button><button>5</button><button>6</button><button>-</button>
-<button>1</button><button>2</button><button>3</button><button>+</button>
-<button class="zero">0</button><button>.</button><button>=</button>
+<div id="app">
+<header class="top">
+<img src="assets/logo.svg">
+<h1>IVA Calculator Pro</h1>
+<button id="theme">Theme</button>
+<button id="historyBtn">History</button>
+</header>
+
+<nav class="mobile-nav">
+<button>Calc</button><button>Convert</button><button>Settings</button>
+</nav>
+
+<main class="glass">
+<section class="display">
+<div id="expression">0</div>
+<div id="result">0</div>
+</section>
+
+<div id="keys"></div>
+</main>
+
+<section class="glass tools">
+<h2>Tools</h2>
+<button>Unit Converter</button>
+<button>Currency API</button>
+<button>Programmer Mode</button>
+<button>Equation Solver</button>
+</section>
+
+<section class="glass">
+<h2>History</h2>
+<ul id="history"></ul>
+<button id="clearHistory">Clear</button>
+<button id="exportHistory">Export</button>
+</section>
 </div>
-</div>
-<script src="script.js"></script>
+<script src="src/parser.js"></script>
+<script src="src/app.js"></script>
 </body>
 </html>
