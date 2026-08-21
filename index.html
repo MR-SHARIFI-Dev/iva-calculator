@@ -1,21 +1,30 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>IVA Calculator Pro</title>
-<meta name="description" content="IVA Calculator Pro scientific open source calculator">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="IVA Calculator Pro - Open source scientific calculator">
 <meta property="og:title" content="IVA Calculator Pro">
 <meta property="og:image" content="assets/social-preview.png">
+<link rel="icon" href="assets/logo.svg">
 <link rel="stylesheet" href="src/style.css">
+<title>IVA Calculator Pro</title>
 </head>
 <body>
 <div class="app">
-<header><img src="assets/logo.svg"><h1>IVA Calculator Pro</h1><button id="theme">Theme</button></header>
-<div class="screen"><div id="expr">0</div><b id="result">0</b></div>
+<header>
+<img src="assets/logo.svg">
+<h1>IVA Calculator Pro</h1>
+<button id="theme">Theme</button>
+</header>
+<div class="calculator">
+<div id="expression">0</div>
+<div id="result">0</div>
 <div id="keys"></div>
+</div>
 <section>
-<h2>History</h2><ul id="history"></ul>
-<button id="clear">Clear History</button>
+<h2>History</h2>
+<ul id="history"></ul>
 </section>
 </div>
 <script src="src/parser.js"></script>
