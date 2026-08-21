@@ -2,7 +2,7 @@
 
 ![Logo](assets/logo.svg)
 
-![Banner](assets/banner.png)
+![IVA Calculator Banner](assets/banner.png)
 
 Professional open-source scientific calculator.
 
