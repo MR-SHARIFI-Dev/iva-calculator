@@ -1,7 +1,6 @@
 # IVA Calculator Pro
 
-![Logo](assets/logo.svg)
-
+ 
 ![IVA Calculator Banner](assets/banner.png)
 
 Professional open-source scientific calculator.
@@ -16,7 +15,7 @@ Professional open-source scientific calculator.
 - GitHub Pages ready
 
 ## Demo
-https://username.github.io/iva-calculator/
+https://MR-SHARIFI-Dev.github.io/iva-calculator/
 
 ## Structure
 HTML / CSS / JavaScript
