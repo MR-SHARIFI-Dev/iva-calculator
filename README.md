@@ -2,99 +2,114 @@
 
 ![IVA Calculator Banner](assets/banner.png)
 
-A polished, dependency-free scientific calculator that runs entirely in the browser. IVA uses a real recursive-descent expression parser—no `eval`, no server, and no calculation data leaving the device.
+## 🇬🇧 English
 
-## Features
+IVA Calculator Pro is a modern, secure, dependency-free scientific calculator that runs completely in the browser.
 
-- Safe expression parser with standard operator precedence
-- Arithmetic, parentheses, powers (including negative exponents), factorials and percentages
+The project focuses on privacy, accuracy, performance, and a clean user experience. All calculations are processed locally on the user's device.
+
+## ✨ Features
+
+- Safe recursive-descent expression parser
+- No `eval` or unsafe execution
+- Scientific calculations
+- Arithmetic operations, powers, factorials and percentages
 - Trigonometric functions with DEG/RAD modes
-- `sqrt`, `log`, `ln`, `abs`, rounding functions, π, e and Ans
-- Implicit multiplication such as `2pi` and `3(4+1)`
-- Live result preview, explicit `=` finalization and clear error messages
-- Strict guarded input with disabled pending operators, key-repeat protection and malformed-decimal prevention
-- Persistent, reusable calculation history
-- Keyboard controls and responsive mobile layout
-- Dark/light theme saved across visits
-- Installable PWA with offline support
-- Accessible controls and reduced-motion support
-- Automated parser tests and GitHub Pages deployment
+- Mathematical constants (`π`, `e`)
+- Smart implicit multiplication
+- Calculation history
+- Dark and light themes
+- Responsive mobile interface
+- Progressive Web App (PWA) support
+- Offline capability
+- Keyboard support
+- Accessibility-focused interface
 
-> **Notation:** the `e` key means Euler's number (2.718…), so `2e3` is 2 × e × 3 ≈ 16.31. Scientific notation uses an uppercase `E`: `2E3` is 2000 and `2E-3` is 0.002.
+## 🔒 Privacy
 
-## Demo
+IVA Calculator Pro does not send calculations to any external server.
 
-[MR-SHARIFI-Dev.github.io/iva-calculator](https://MR-SHARIFI-Dev.github.io/iva-calculator/)
+All expressions, results and history remain on the user's device.
 
-## Run locally
-
-No build step or dependencies are required.
-
-```bash
-npm run serve
-```
-
-Open `http://localhost:4173`. ES modules require an HTTP server, so opening `index.html` directly via `file://` is not recommended.
-
-## Tests
-
-Node.js 20.19 or newer is required for the development toolchain.
+## 🚀 Installation
 
 ```bash
 npm install
-npx playwright install chromium
-npm run verify   # ESLint + Node tests + real Chromium interaction tests
+npm run serve
 ```
 
-On a minimal Linux environment, Playwright may also require `npx playwright install-deps chromium`. The browser application itself still has no runtime dependencies.
+Open:
 
-## Parser API
-
-```js
-import { calculate } from './src/parser.js';
-
-calculate('2 + 3 * 4');                         // 14
-calculate('sin(30)', { angleMode: 'deg' });     // 0.5
-calculate('ans * 2', { ans: 21 });              // 42
-calculate('2E3');                               // 2000 (uppercase E = scientific notation)
-calculate('2e3');                               // 16.31… (lowercase e = Euler × 3)
+```
+http://localhost:4173
 ```
 
-Invalid input throws `CalculatorError` with a user-readable message and, when available, a source position.
+## 🧪 Testing
 
-## Keyboard
-
-| Key | Action |
-|---|---|
-| `0–9`, operators, parentheses | Enter expression |
-| `Enter` or `=` | Calculate |
-| `Backspace` | Delete one character |
-| `Escape` or `Delete` | Clear |
-
-## Project structure
-
-```text
-index.html             App markup
-src/app.js             UI state and interactions
-src/parser.js          Tokenizer and expression parser
-src/input.js           Pure input-guard rules
-src/format.js          Pure number/expression formatting
-src/style.css          Responsive theme and components
-tests/*.test.js        Node test suites
-tests/e2e.spec.js      Real-browser interaction tests
-scripts/               User-session simulations
-manifest.webmanifest   Install metadata
-sw.js                  Offline service worker
+```bash
+npm run verify
 ```
 
-## Security and privacy
+## 📚 Documentation
 
-Expressions are parsed locally with a fixed grammar. Arbitrary JavaScript execution is not used. History and preferences are stored only in browser `localStorage` and can be cleared from the interface.
+See the Wiki section for:
 
-## Contributing
+- Architecture
+- Parser design
+- API usage
+- Development guide
+- Contribution rules
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Contributions and reproducible bug reports are welcome.
+---
 
-## License
+# 🇮🇷 فارسی
 
-[MIT](LICENSE)
+IVA Calculator Pro یک ماشین حساب علمی مدرن، امن و بدون وابستگی است که کاملاً داخل مرورگر اجرا می‌شود.
+
+هدف پروژه ارائه یک تجربه سریع، دقیق و خصوصی برای انجام محاسبات علمی است.
+
+## ✨ امکانات
+
+- موتور محاسبه امن بدون استفاده از `eval`
+- تحلیل عبارت‌ها با Recursive Descent Parser
+- محاسبات علمی و ریاضی
+- توان، فاکتوریل و درصد
+- توابع مثلثاتی با حالت درجه و رادیان
+- ثابت‌های ریاضی π و e
+- ضرب ضمنی هوشمند
+- ذخیره تاریخچه محاسبات
+- حالت تاریک و روشن
+- طراحی واکنش‌گرا برای موبایل
+- پشتیبانی PWA
+- قابلیت استفاده آفلاین
+- کنترل با صفحه‌کلید
+- طراحی قابل دسترس
+
+## 🔒 حریم خصوصی
+
+IVA Calculator Pro هیچ اطلاعاتی را به سرور خارجی ارسال نمی‌کند.
+
+تمام محاسبات و تاریخچه فقط روی دستگاه کاربر ذخیره می‌شوند.
+
+## 🚀 اجرا
+
+```bash
+npm install
+npm run serve
+```
+
+سپس:
+
+```
+http://localhost:4173
+```
+
+## 📚 مستندات
+
+Wiki پروژه شامل:
+
+- معماری پروژه
+- ساختار Parser
+- راهنمای توسعه
+- API
+- قوانین مشارکت
