@@ -1,33 +1,121 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="IVA Calculator Pro - Open source scientific calculator">
-<meta property="og:title" content="IVA Calculator Pro">
-<meta property="og:image" content="assets/social-preview.png">
-<link rel="icon" href="assets/logo.svg">
-<link rel="stylesheet" href="src/style.css">
-<title>IVA Calculator Pro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="IVA Calculator Pro — a fast, private and open-source scientific calculator.">
+  <meta name="theme-color" content="#05030c">
+  <meta property="og:title" content="IVA Calculator Pro">
+  <meta property="og:description" content="A modern open-source scientific calculator.">
+  <meta property="og:image" content="assets/social-preview.png">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest?v=3.3.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('iva-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); } catch {}
+  </script>
+  <link rel="stylesheet" href="src/style.css?v=3.3.0">
+  <title>IVA Calculator Pro</title>
 </head>
 <body>
-<div class="app">
-<header>
-<img src="assets/logo.svg">
-<h1>IVA Calculator Pro</h1>
-<button id="theme">Theme</button>
-</header>
-<div class="calculator">
-<div id="expression">0</div>
-<div id="result">0</div>
-<div id="keys"></div>
-</div>
-<section>
-<h2>History</h2>
-<ul id="history"></ul>
-</section>
-</div>
-<script src="src/parser.js"></script>
-<script src="src/app.js"></script>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="IVA Calculator home">
+        <img src="assets/logo.svg" alt="" width="52" height="52">
+        <span><strong>IVA</strong><small>Calculator Pro · v3.3.0</small></span>
+      </a>
+      <div class="toolbar">
+        <button class="icon-button" id="angle-mode" type="button" aria-label="Switch angle mode">DEG</button>
+        <button class="icon-button" id="theme" type="button" aria-label="Switch color theme" title="Switch color theme">☾</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <section class="calculator" aria-label="Scientific calculator">
+        <div class="display">
+          <span class="display-tag">IVA</span>
+          <div id="expression" class="expression">0</div>
+          <div id="result" class="result">0</div>
+          <div id="message" class="message" role="status"></div>
+        </div>
+
+        <div id="keys" class="keys">
+          <div class="fn-bar">
+            <button type="button" data-value="asin(" class="key scientific sm">asin</button>
+            <button type="button" data-value="acos(" class="key scientific sm">acos</button>
+            <button type="button" data-value="atan(" class="key scientific sm">atan</button>
+            <button type="button" data-value="abs(" class="key scientific sm">abs</button>
+            <button type="button" data-value="exp(" class="key scientific sm">exp</button>
+            <button type="button" data-value="floor(" class="key scientific sm">floor</button>
+            <button type="button" data-value="ceil(" class="key scientific sm">ceil</button>
+            <button type="button" data-value="round(" class="key scientific sm">round</button>
+          </div>
+
+          <button type="button" data-action="clear" class="key utility">AC</button>
+          <button type="button" data-action="backspace" class="key utility" aria-label="Backspace">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M9.8 5h10.7A1.5 1.5 0 0 1 22 6.5v11a1.5 1.5 0 0 1-1.5 1.5H9.8a2 2 0 0 1-1.52-.68L2.3 12.7a1 1 0 0 1 0-1.4l5.98-6.62A2 2 0 0 1 9.8 5Zm1.7 4.3-1.1 1.1 2.4 2.1-2.4 2.1 1.1 1.1 2.4-2.1 2.4 2.1 1.1-1.1-2.4-2.1 2.4-2.1-1.1-1.1-2.4 2.1-2.4-2.1Z"/>
+            </svg>
+          </button>
+          <button type="button" data-value="(" class="key utility">(</button>
+          <button type="button" data-value=")" class="key utility">)</button>
+          <button type="button" data-value="%" class="key utility">%</button>
+          <button type="button" data-value="/" class="key operator" aria-label="Divide">÷</button>
+
+          <button type="button" data-value="sin(" class="key scientific">sin</button>
+          <button type="button" data-value="cos(" class="key scientific">cos</button>
+          <button type="button" data-value="tan(" class="key scientific">tan</button>
+          <button type="button" data-value="log(" class="key scientific">log</button>
+          <button type="button" data-value="ln(" class="key scientific">ln</button>
+          <button type="button" data-value="*" class="key operator" aria-label="Multiply">×</button>
+
+          <button type="button" data-value="7" class="key">7</button>
+          <button type="button" data-value="8" class="key">8</button>
+          <button type="button" data-value="9" class="key">9</button>
+          <button type="button" data-value="sqrt(" class="key scientific">√</button>
+          <button type="button" data-value="^" class="key scientific">xʸ</button>
+          <button type="button" data-value="-" class="key operator" aria-label="Subtract">−</button>
+
+          <button type="button" data-value="4" class="key">4</button>
+          <button type="button" data-value="5" class="key">5</button>
+          <button type="button" data-value="6" class="key">6</button>
+          <button type="button" data-value="pi" class="key scientific">π</button>
+          <button type="button" data-value="!" class="key scientific">x!</button>
+          <button type="button" data-value="+" class="key operator" aria-label="Add">+</button>
+
+          <button type="button" data-value="1" class="key">1</button>
+          <button type="button" data-value="2" class="key">2</button>
+          <button type="button" data-value="3" class="key">3</button>
+          <button type="button" data-value="e" class="key scientific">e</button>
+          <button type="button" data-value="ans" class="key scientific">Ans</button>
+          <button type="button" data-action="equals" class="key equals" aria-label="Calculate">=</button>
+
+          <button type="button" data-value="0" class="key zero">0</button>
+          <button type="button" data-value="." class="key">.</button>
+          <button type="button" data-value="00" class="key wide">00</button>
+        </div>
+        <p class="keyboard-hint">Keyboard supported · Enter to calculate · Esc to clear</p>
+      </section>
+
+      <aside class="history-panel">
+        <div class="panel-title">
+          <h2>History</h2>
+          <button id="clear-history" class="text-button" type="button">Clear</button>
+        </div>
+        <ol id="history" class="history-list"></ol>
+        <p id="empty-history" class="empty-state">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="8" y="10" width="32" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 20h16M16 26h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Your calculations will appear here.
+        </p>
+      </aside>
+    </div>
+    <footer>Private by design · Calculations stay on your device</footer>
+  </main>
+  <script type="module" src="src/app.js?v=3.3.0"></script>
 </body>
 </html>
