@@ -329,15 +329,6 @@ IVA Calculator Pro یک وب‌اپلیکیشن پیشرونده (PWA) است ک
 
 برای مشاهدهٔ کامل گرامر به صفحهٔ [طراحی پارسر](docs/wiki/Parser.md) و برای مدل داده به [حریم خصوصی و امنیت](docs/wiki/Privacy-and-Security.md) مراجعه کنید.
 
-## شروع سریع
-
-```bash
-# ۱. نصب ابزار توسعه (Playwright + ESLint)
-npm install
-
-# ۲. اجرای برنامه به‌صورت محلی
-npm run serve
-```
 
 سپس آدرس **http://localhost:4173** را در مرورگر باز کنید.
 
