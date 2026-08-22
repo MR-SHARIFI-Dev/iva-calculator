@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('/?app-version=3.3.0');
-  await expect(page.locator('.brand small')).toContainText('v3.3.0');
+  await page.goto('/?app-version=3.3.1');
+  await expect(page.locator('.brand small')).toContainText('v3.3.1');
 });
 
 test('blocks repeated operators through mouse and keyboard input', async ({ page }) => {

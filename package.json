@@ -1,11 +1,11 @@
 {
   "name": "iva-calculator-pro",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "A private, dependency-free scientific calculator with a safe expression parser.",
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "node --test \"tests/*.test.js\"",
+    "test": "node --test tests/",
     "test:e2e": "playwright test",
     "lint": "eslint src tests sw.js playwright.config.js",
     "verify": "npm run lint && npm test && npm run test:e2e",

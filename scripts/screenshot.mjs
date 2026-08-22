@@ -10,7 +10,7 @@ const capture = async (colorScheme, viewport, path) => {
   await page.addInitScript((scheme) => {
     try { localStorage.setItem('iva-theme', scheme === 'light' ? 'light' : 'dark'); } catch {}
   }, colorScheme);
-  await page.goto('http://127.0.0.1:4173/?app-version=3.3.0');
+  await page.goto('http://127.0.0.1:4173/?app-version=3.3.1');
   await page.waitForTimeout(600);
   await page.getByRole('button', { name: '2', exact: true }).click();
   await page.getByRole('button', { name: 'e', exact: true }).click();
@@ -21,9 +21,9 @@ const capture = async (colorScheme, viewport, path) => {
   await page.close();
 };
 
-await capture('dark', { width: 1180, height: 900 }, 'assets/screenshots/v3.3.0-dark.png');
+await capture('dark', { width: 1180, height: 900 }, 'assets/screenshots/v3.3.1-dark.png');
 await capture('dark', { width: 1180, height: 900 }, 'assets/screenshots/desktop.png');
-await capture('light', { width: 1180, height: 900 }, 'assets/screenshots/v3.3.0-light.png');
+await capture('light', { width: 1180, height: 900 }, 'assets/screenshots/v3.3.1-light.png');
 await capture('dark', { width: 390, height: 844 }, 'assets/screenshots/mobile.png');
 await browser.close();
 console.log('screenshots saved');

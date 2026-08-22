@@ -1,5 +1,7 @@
-# Parser
+# Expression Parser
 
-Documentation about expression parsing engine.
+## English
+IVA uses a safe recursive-descent parser instead of eval.
 
-مستندات موتور تحلیل عبارت‌ها.
+## فارسی
+IVA از Parser امن Recursive Descent استفاده می‌کند و از eval استفاده نمی‌کند.

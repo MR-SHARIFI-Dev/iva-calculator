@@ -1,5 +1,5 @@
-# Architecture
+# Architecture / معماری
 
-Project architecture and technical overview.
+The application is built with a modular browser architecture.
 
-معماری و ساختار فنی پروژه.
+ساختار پروژه ماژولار و مبتنی بر مرورگر است.

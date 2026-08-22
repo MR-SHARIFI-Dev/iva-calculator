@@ -1,30 +1,34 @@
 :root {
   color-scheme: dark;
-  --bg: #05030c;
-  --bg-accent-a: rgba(124, 58, 237, .38);
-  --bg-accent-b: rgba(236, 72, 153, .2);
-  --bg-accent-c: rgba(34, 211, 238, .14);
-  --surface: #141022;
-  --surface-2: #1c1630;
-  --key: #221b38;
-  --key-top: #2d2448;
-  --key-hover: #352b54;
-  --text: #f6f3ff;
-  --muted: #b0a6c8;
-  --accent: #c084fc;
-  --accent-2: #7c3aed;
-  --accent-3: #22d3ee;
-  --danger: #fb7185;
-  --ok: #34d399;
-  --line: rgba(255, 255, 255, .1);
-  --operator-bg: #6d28d9;
-  --operator-top: #8b5cf6;
-  --operator-text: #ffffff;
-  --display: #08060f;
-  --shadow: 0 30px 80px rgba(0, 0, 0, .5), 0 0 80px rgba(124, 58, 237, .12);
-  --key-shadow: 0 6px 0 #140f22, 0 10px 18px rgba(0, 0, 0, .35);
-  --op-shadow: 0 6px 0 #3b0764, 0 10px 20px rgba(109, 40, 217, .35);
-  --eq-shadow: 0 8px 0 #4c1d95, 0 14px 28px rgba(34, 211, 238, .22);
+  /* Luxury black & gold. The blacks are near-neutral with only a whisper of
+     warm tint (never olive): surfaces stay charcoal, gold is reserved for
+     accents. Keys are lifted off the panel with gold-tinted borders, a
+     bevel highlight and deep drop shadows. */
+  --bg: #0b0a08;
+  --bg-accent-a: rgba(240, 201, 78, .14);
+  --bg-accent-b: rgba(217, 167, 60, .07);
+  --bg-accent-c: rgba(140, 104, 20, .16);
+  --surface: #16130f;
+  --surface-2: #201c16;
+  --key: #29251c;
+  --key-top: #322d22;
+  --key-hover: #3b3529;
+  --text: #f6f0de;
+  --muted: #b6a678;
+  --accent: #f0c94e;
+  --accent-2: #d9a73c;
+  --accent-3: #ffe28a;
+  --danger: #ff9080;
+  --ok: #7fdd96;
+  --line: rgba(240, 201, 78, .16);
+  --operator-bg: #8a6814;
+  --operator-top: #dbb43e;
+  --operator-text: #221604;
+  --display: #0e0c09;
+  --shadow: 0 30px 80px rgba(0, 0, 0, .55), 0 0 90px rgba(217, 167, 60, .08);
+  --key-shadow: 0 6px 0 #0d0b08, 0 10px 18px rgba(0, 0, 0, .45);
+  --op-shadow: 0 6px 0 #5c4508, 0 10px 20px rgba(217, 167, 60, .28);
+  --eq-shadow: 0 8px 0 #8a6814, 0 14px 28px rgba(240, 201, 78, .30);
   --radius: 28px;
   --font: "Outfit", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -32,31 +36,31 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #efe8f8;
-  --bg-accent-a: rgba(167, 139, 250, .45);
-  --bg-accent-b: rgba(244, 114, 182, .22);
-  --bg-accent-c: rgba(34, 211, 238, .18);
-  --surface: #f7f3ff;
-  --surface-2: #f0eafb;
-  --key: #efe8f8;
-  --key-top: #faf7ff;
-  --key-hover: #e4daf6;
-  --text: #1c152c;
-  --muted: #6d6280;
-  --accent: #6d28d9;
-  --accent-2: #5b21b6;
-  --accent-3: #0891b2;
-  --danger: #e11d48;
-  --ok: #059669;
-  --line: rgba(48, 24, 80, .12);
-  --operator-bg: #6d28d9;
-  --operator-top: #8b5cf6;
-  --operator-text: #ffffff;
-  --display: #ece6f6;
-  --shadow: 0 28px 70px rgba(76, 29, 149, .14), 0 0 0 1px rgba(255, 255, 255, .4) inset;
-  --key-shadow: 0 5px 0 #d4c8ea, 0 10px 16px rgba(88, 40, 140, .1);
-  --op-shadow: 0 5px 0 #4c1d95, 0 10px 18px rgba(109, 40, 217, .28);
-  --eq-shadow: 0 6px 0 #5b21b6, 0 12px 24px rgba(109, 40, 217, .22);
+  --bg: #f6efdf;
+  --bg-accent-a: rgba(184, 134, 11, .20);
+  --bg-accent-b: rgba(217, 167, 60, .20);
+  --bg-accent-c: rgba(133, 95, 8, .08);
+  --surface: #fffdf6;
+  --surface-2: #f5edda;
+  --key: #efe6cc;
+  --key-top: #fcf8ec;
+  --key-hover: #e5d9b6;
+  --text: #292114;
+  --muted: #7c6d47;
+  --accent: #855f08;
+  --accent-2: #b8860b;
+  --accent-3: #d9a73c;
+  --danger: #c2410c;
+  --ok: #15803d;
+  --line: rgba(133, 95, 8, .20);
+  --operator-bg: #8a6a1a;
+  --operator-top: #d9b13c;
+  --operator-text: #221604;
+  --display: #faf4e2;
+  --shadow: 0 28px 70px rgba(120, 90, 20, .16), 0 0 0 1px rgba(255, 255, 255, .5) inset;
+  --key-shadow: 0 5px 0 #d8c89a, 0 10px 16px rgba(120, 90, 20, .12);
+  --op-shadow: 0 5px 0 #5c4508, 0 10px 18px rgba(184, 134, 11, .32);
+  --eq-shadow: 0 6px 0 #8a6814, 0 12px 24px rgba(184, 134, 11, .28);
 }
 
 * { box-sizing: border-box; }
@@ -110,7 +114,7 @@ button { font: inherit; touch-action: manipulation; }
   width: 56px;
   height: 56px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(168, 85, 247, .35);
+  box-shadow: 0 8px 20px rgba(217, 167, 60, .32), 0 0 0 1px rgba(240, 201, 78, .22) inset;
 }
 
 .brand span { display: flex; flex-direction: column; line-height: 1.1; gap: 4px; }
@@ -119,14 +123,14 @@ button { font: inherit; touch-action: manipulation; }
   font-size: 1.55rem;
   font-weight: 800;
   letter-spacing: .14em;
-  background: linear-gradient(120deg, #fff 10%, #c084fc 55%, #22d3ee 120%);
+  background: linear-gradient(120deg, #fff6d8 10%, #f0c94e 55%, #b8860b 120%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 :root[data-theme="light"] .brand strong {
-  background: linear-gradient(120deg, #1e1140 10%, #6d28d9 60%, #0891b2);
+  background: linear-gradient(120deg, #3a2d08 10%, #9a6d0b 60%, #6b4f06);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -163,7 +167,7 @@ button { font: inherit; touch-action: manipulation; }
 .icon-button:active { transform: translateY(1px); }
 
 #angle-mode {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 22%, var(--surface-2)), var(--surface-2));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 20%, var(--surface-2)), var(--surface-2));
 }
 
 .layout {
@@ -202,7 +206,7 @@ button { font: inherit; touch-action: manipulation; }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(160deg, rgba(255, 255, 255, .07), transparent 36%);
+  background: linear-gradient(160deg, rgba(255, 246, 216, .05), transparent 36%);
   border-radius: inherit;
 }
 
@@ -211,24 +215,24 @@ button { font: inherit; touch-action: manipulation; }
   min-height: 154px;
   padding: 20px 22px 16px;
   margin-bottom: 16px;
-  border: 1px solid rgba(255, 255, 255, .06);
+  border: 1px solid rgba(240, 201, 78, .12);
   border-radius: 22px;
   background:
-    radial-gradient(120% 80% at 100% 0%, rgba(124, 58, 237, .16), transparent 50%),
-    radial-gradient(80% 70% at 0% 100%, rgba(34, 211, 238, .08), transparent 46%),
+    radial-gradient(120% 80% at 100% 0%, rgba(240, 201, 78, .10), transparent 50%),
+    radial-gradient(80% 70% at 0% 100%, rgba(217, 167, 60, .05), transparent 46%),
     var(--display);
   text-align: right;
   overflow: hidden;
   box-shadow:
-    inset 0 2px 10px rgba(0, 0, 0, .45),
-    inset 0 0 40px rgba(124, 58, 237, .08);
+    inset 0 2px 12px rgba(0, 0, 0, .5),
+    inset 0 0 40px rgba(240, 201, 78, .05);
 }
 
 :root[data-theme="light"] .display {
-  border-color: rgba(76, 29, 149, .08);
+  border-color: rgba(184, 134, 11, .16);
   box-shadow:
-    inset 0 2px 8px rgba(76, 29, 149, .08),
-    inset 0 0 30px rgba(124, 58, 237, .04);
+    inset 0 2px 8px rgba(184, 134, 11, .08),
+    inset 0 0 30px rgba(217, 167, 60, .06);
 }
 
 .display-tag {
@@ -264,14 +268,14 @@ button { font: inherit; touch-action: manipulation; }
   letter-spacing: -.045em;
   overflow-wrap: anywhere;
   font-variant-numeric: tabular-nums;
-  background: linear-gradient(180deg, #ffffff 10%, #ddd6fe 78%, #67e8f9);
+  background: linear-gradient(180deg, #fff8e0 10%, #f2d77b 60%, #d9a73c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 :root[data-theme="light"] .result {
-  background: linear-gradient(180deg, #1e1140, #5b21b6 70%, #0e7490);
+  background: linear-gradient(180deg, #3a2d08, #8a6a1a 70%, #5c4508);
   -webkit-background-clip: text;
   background-clip: text;
   filter: none;
@@ -312,25 +316,25 @@ button { font: inherit; touch-action: manipulation; }
   position: relative;
   min-width: 0;
   height: 58px;
-  border: 1px solid rgba(255, 255, 255, .05);
+  border: 1px solid rgba(240, 201, 78, .18);
   border-radius: 16px;
   color: var(--text);
   background: linear-gradient(180deg, var(--key-top), var(--key));
   font-size: 1.08rem;
   font-weight: 650;
   cursor: pointer;
-  box-shadow: var(--key-shadow);
+  box-shadow: var(--key-shadow), inset 0 1px 0 rgba(255, 246, 216, .08);
   transition: transform .08s ease-out;
 }
 
 .key:hover {
   background: linear-gradient(180deg, var(--key-hover), var(--key));
-  border-color: rgba(192, 132, 252, .35);
+  border-color: rgba(240, 201, 78, .5);
 }
 
 .key:active, .key.is-pressed {
   transform: translateY(4px);
-  box-shadow: 0 2px 0 #140f22, 0 4px 10px rgba(0, 0, 0, .25);
+  box-shadow: 0 2px 0 #0d0b08, 0 4px 10px rgba(0, 0, 0, .3);
 }
 
 .key:disabled {
@@ -346,7 +350,7 @@ button { font: inherit; touch-action: manipulation; }
 }
 
 .key:focus-visible, button:focus-visible, a:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent);
   outline-offset: 2px;
 }
 
@@ -354,20 +358,20 @@ button { font: inherit; touch-action: manipulation; }
   color: var(--operator-text);
   background-color: var(--operator-bg);
   background-image: linear-gradient(180deg, var(--operator-top), var(--operator-bg));
-  border-color: rgba(255, 255, 255, .16);
+  border-color: rgba(255, 236, 170, .35);
   font-size: 1.32rem;
   font-weight: 700;
-  box-shadow: var(--op-shadow);
+  box-shadow: var(--op-shadow), inset 0 1px 0 rgba(255, 246, 216, .25);
 }
 
 .key.operator:hover {
   background-color: var(--accent-2);
-  background-image: linear-gradient(180deg, #a78bfa, var(--accent-2));
-  border-color: rgba(255, 255, 255, .35);
+  background-image: linear-gradient(180deg, #ecc85a, #9a7417);
+  border-color: rgba(255, 236, 170, .6);
 }
 
 .key.operator:active, .key.operator.is-pressed {
-  box-shadow: 0 2px 0 #3b0764;
+  box-shadow: 0 2px 0 #5c4508;
 }
 
 .key.operator:disabled,
@@ -385,10 +389,10 @@ button { font: inherit; touch-action: manipulation; }
   font-size: .86rem;
   font-weight: 600;
   letter-spacing: .02em;
-  color: #d8c8ef;
+  color: #e9d9a1;
 }
 
-[data-theme="light"] .key.scientific { color: #5b4578; }
+[data-theme="light"] .key.scientific { color: #6b5410; }
 
 .key.scientific.sm {
   height: 38px;
@@ -396,11 +400,11 @@ button { font: inherit; touch-action: manipulation; }
   font-size: .68rem;
   letter-spacing: .03em;
   text-transform: lowercase;
-  box-shadow: 0 3px 0 #140f22, 0 6px 10px rgba(0, 0, 0, .22);
+  box-shadow: 0 3px 0 #0d0b08, 0 6px 10px rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 246, 216, .06);
 }
 
 [data-theme="light"] .key.scientific.sm {
-  box-shadow: 0 3px 0 #d4c8ea, 0 6px 10px rgba(88, 40, 140, .08);
+  box-shadow: 0 3px 0 #d8c89a, 0 6px 10px rgba(120, 90, 20, .08);
 }
 
 .key.scientific.sm:active, .key.scientific.sm.is-pressed {
@@ -410,18 +414,18 @@ button { font: inherit; touch-action: manipulation; }
 .key.equals {
   grid-row: span 2;
   height: auto;
-  color: white;
-  background: linear-gradient(160deg, #67e8f9 0%, var(--accent) 48%, var(--accent-2) 100%);
-  box-shadow: var(--eq-shadow);
+  color: #201505;
+  background: linear-gradient(160deg, #ffe9a3 0%, #f0c94e 48%, #b8860b 100%);
+  box-shadow: var(--eq-shadow), inset 0 1px 0 rgba(255, 255, 255, .5);
   font-size: 1.55rem;
   font-weight: 800;
   overflow: hidden;
 }
 
-.key.equals:hover { border-color: rgba(255, 255, 255, .28); }
+.key.equals:hover { border-color: rgba(255, 236, 170, .7); }
 
 .key.equals:active, .key.equals.is-pressed {
-  box-shadow: 0 3px 0 #4c1d95;
+  box-shadow: 0 3px 0 #8a6814;
 }
 
 .key.zero, .key.wide { grid-column: span 2; }
@@ -491,7 +495,7 @@ button { font: inherit; touch-action: manipulation; }
   transform: translateX(-2px);
   box-shadow:
     inset 3px 0 0 var(--accent),
-    0 8px 20px rgba(124, 58, 237, .12);
+    0 8px 20px rgba(217, 167, 60, .14);
 }
 
 .history-item span, .history-item strong { display: block; overflow-wrap: anywhere; }

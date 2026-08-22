@@ -2,7 +2,7 @@ import { chromium } from '@playwright/test';
 const browser = await chromium.launch();
 const context = await browser.newContext({ serviceWorkers: 'allow' });
 const page = await context.newPage();
-await page.goto('http://127.0.0.1:4173/?app-version=3.3.0');
+await page.goto('http://127.0.0.1:4173/?app-version=3.3.1');
 await page.waitForTimeout(1500);
 const ready = await page.evaluate(async () => {
   try { await navigator.serviceWorker.ready; return true; } catch { return false; }

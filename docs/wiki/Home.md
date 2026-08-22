@@ -1,9 +1,5 @@
-# IVA Calculator Pro
+# IVA Calculator Pro Wiki
 
-Official bilingual documentation.
+Welcome to the official documentation.
 
-## English
-Welcome to IVA Calculator Pro documentation.
-
-## فارسی
-به مستندات رسمی IVA Calculator Pro خوش آمدید.
+به مستندات رسمی پروژه IVA Calculator Pro خوش آمدید.

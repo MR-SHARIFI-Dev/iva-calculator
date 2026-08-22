@@ -1,5 +1,7 @@
-# API
+# Parser API
 
-API documentation.
+```js
+calculate('2+2')
+```
 
-مستندات API.
+Returns the calculated result.

@@ -1,4 +1,4 @@
-const VERSION = '3.3.0';
+const VERSION = '3.3.1';
 const CACHE = `iva-calculator-v${VERSION}`;
 const VERSION_QUERY = `app-version=${VERSION}`;
 const OFFLINE_PAGE = `./index.html?${VERSION_QUERY}`;
@@ -7,7 +7,7 @@ const ASSETS = [
   `./src/style.css?v=${VERSION}`, `./src/app.js?v=${VERSION}`,
   `./src/parser.js?v=${VERSION}`, `./src/input.js?v=${VERSION}`,
   `./src/format.js?v=${VERSION}`,
-  `./manifest.webmanifest?v=${VERSION}`, './assets/logo.svg', './assets/logo-dark.svg', './assets/favicon.svg'
+  `./manifest.webmanifest?v=${VERSION}`, './assets/logo.png', './assets/favicon.png', './assets/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (event) => {

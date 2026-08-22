@@ -1,5 +1,3 @@
-# FAQ
+# FAQ / سوالات متداول
 
-Frequently asked questions.
-
-سوالات متداول.
+Common questions about installation, usage and privacy.

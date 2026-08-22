@@ -4,27 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="IVA Calculator Pro — a fast, private and open-source scientific calculator.">
-  <meta name="theme-color" content="#05030c">
+  <meta name="theme-color" content="#0b0a08">
   <meta property="og:title" content="IVA Calculator Pro">
   <meta property="og:description" content="A modern open-source scientific calculator.">
   <meta property="og:image" content="assets/social-preview.png">
-  <link rel="icon" href="assets/favicon.svg">
-  <link rel="manifest" href="manifest.webmanifest?v=3.3.0">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest?v=3.3.1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <script>
     try { document.documentElement.dataset.theme = localStorage.getItem('iva-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); } catch {}
   </script>
-  <link rel="stylesheet" href="src/style.css?v=3.3.0">
+  <link rel="stylesheet" href="src/style.css?v=3.3.1">
   <title>IVA Calculator Pro</title>
 </head>
 <body>
   <main class="app">
     <header class="topbar">
       <a class="brand" href="./" aria-label="IVA Calculator home">
-        <img src="assets/logo.svg" alt="" width="52" height="52">
-        <span><strong>IVA</strong><small>Calculator Pro · v3.3.0</small></span>
+        <img src="assets/logo.png" alt="" width="52" height="52">
+        <span><strong>IVA</strong><small>Calculator Pro · v3.3.1</small></span>
       </a>
       <div class="toolbar">
         <button class="icon-button" id="angle-mode" type="button" aria-label="Switch angle mode">DEG</button>
@@ -116,6 +117,6 @@
     </div>
     <footer>Private by design · Calculations stay on your device</footer>
   </main>
-  <script type="module" src="src/app.js?v=3.3.0"></script>
+  <script type="module" src="src/app.js?v=3.3.1"></script>
 </body>
 </html>

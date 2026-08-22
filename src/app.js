@@ -1,6 +1,6 @@
-import { calculate, CalculatorError } from './parser.js?v=3.3.0';
-import { appendToken, closeOpenParentheses, deleteLastToken, isBinaryOperator, startsNewExpression } from './input.js?v=3.3.0';
-import { formatNumber, prettyExpression } from './format.js?v=3.3.0';
+import { calculate, CalculatorError } from './parser.js?v=3.3.1';
+import { appendToken, closeOpenParentheses, deleteLastToken, isBinaryOperator, startsNewExpression } from './input.js?v=3.3.1';
+import { formatNumber, prettyExpression } from './format.js?v=3.3.1';
 
 const $ = (selector) => document.querySelector(selector);
 const expressionElement = $('#expression');
@@ -222,8 +222,8 @@ function applyTheme(theme) {
     : '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.1 3.1a8.5 8.5 0 1 0 7.8 13.3A7 7 0 0 1 13.1 3.1Z"/></svg>';
   $('#theme').setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
   $('#theme').title = light ? 'Switch to dark theme' : 'Switch to light theme';
-  if (themeColorMeta) themeColorMeta.content = light ? '#efe8f8' : '#05030c';
-  if (brandLogo) brandLogo.src = light ? 'assets/logo-dark.svg' : 'assets/logo.svg';
+  if (themeColorMeta) themeColorMeta.content = light ? '#f6efdf' : '#0b0a08';
+  if (brandLogo) brandLogo.src = 'assets/logo.png';
 }
 
 $('#theme').addEventListener('click', () => {
@@ -277,7 +277,7 @@ const preferredTheme = storage.get('iva-theme') ||
 applyTheme(preferredTheme);
 
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=3.3.0', { updateViaCache: 'none' }).catch(() => {}));
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=3.3.1', { updateViaCache: 'none' }).catch(() => {}));
 }
 
 render({ history: true });

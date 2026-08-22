@@ -7,7 +7,7 @@ const page = await browser.newPage();
 const errors = [];
 page.on('pageerror', (e) => errors.push(`PAGE ERROR: ${e.message}`));
 
-await page.goto(`${BASE}/?app-version=3.3.0`);
+await page.goto(`${BASE}/?app-version=3.3.1`);
 
 const click = async (name) => page.getByRole('button', { name, exact: true }).click();
 const clickOrNote = async (name, label) => {

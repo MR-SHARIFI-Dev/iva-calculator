@@ -1,4 +1,4 @@
-// Full user-session simulation against v3.3.0: scientific flows, errors,
+// Full user-session simulation against v3.3.1: scientific flows, errors,
 // history, persistence, reloads and hostile storage environments.
 import { chromium } from '@playwright/test';
 
@@ -8,7 +8,7 @@ const page = await browser.newPage();
 const errors = [];
 page.on('pageerror', (e) => errors.push(`PAGE ERROR: ${e.message}`));
 
-await page.goto(`${BASE}/?app-version=3.3.0`);
+await page.goto(`${BASE}/?app-version=3.3.1`);
 const click = (name) => page.getByRole('button', { name, exact: true }).click();
 const press = (key) => page.keyboard.press(key);
 const snap = async () => ({
@@ -100,7 +100,7 @@ await hostile.addInitScript(() => {
     get() { throw new Error('SecurityError: storage denied'); }
   });
 });
-await hostile.goto(`${BASE}/?app-version=3.3.0`);
+await hostile.goto(`${BASE}/?app-version=3.3.1`);
 await hostile.getByRole('button', { name: '2', exact: true }).click();
 await hostile.getByRole('button', { name: 'Add' }).click();
 await hostile.getByRole('button', { name: '2', exact: true }).click();
@@ -113,7 +113,7 @@ check('no page errors under denied storage', hostileErrors.length, 0);
 
 // 15. Mobile viewport sanity
 const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
-await mobile.goto(`${BASE}/?app-version=3.3.0`);
+await mobile.goto(`${BASE}/?app-version=3.3.1`);
 await mobile.getByRole('button', { name: 'sin', exact: true }).click();
 await mobile.getByRole('button', { name: '9', exact: true }).click();
 await mobile.getByRole('button', { name: '0', exact: true }).click();

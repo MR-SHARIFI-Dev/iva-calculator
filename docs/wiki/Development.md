@@ -1,5 +1,3 @@
-# Development Guide
+# Development Guide / راهنمای توسعه
 
-Developer workflow and standards.
-
-راهنمای توسعه‌دهندگان.
+Includes testing, linting and contribution workflow.

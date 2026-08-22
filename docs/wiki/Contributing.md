@@ -1,5 +1,3 @@
-# Contributing
+# Contributing / مشارکت
 
-Contribution guidelines.
-
-قوانین مشارکت.
+Guidelines for developers who want to improve IVA Calculator Pro.

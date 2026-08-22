@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
-const VERSION = '3.3.0';
+const VERSION = '3.3.1';
 
 test('HTML loads only versioned current assets and displays the build version', async () => {
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
