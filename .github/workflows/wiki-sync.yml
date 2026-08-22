@@ -8,18 +8,32 @@ on:
 jobs:
   wiki-sync:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Sync docs to GitHub Wiki
+      - name: Prepare wiki folder
+        run: |
+          rm -rf wiki
+
+      - name: Clone wiki repository
         run: |
           git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.wiki.git wiki
+
+      - name: Sync documentation
+        run: |
           rm -rf wiki/*
           cp -r docs/wiki/* wiki/
+
+      - name: Commit wiki changes
+        run: |
           cd wiki
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add .
-          git commit -m "Auto sync wiki documentation" || exit 0
+
+          git commit -m "Auto sync wiki documentation" || echo "No changes"
+
           git push
